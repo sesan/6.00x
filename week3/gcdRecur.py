@@ -1,8 +1,9 @@
-def gcd(a, b):
+def gcdRecur(a, b):
     lo = min(a,b)
     hi = max(a,b)
-    if hi%lo == 0 or lo <= 1:
-        return round(lo)
+    
+    if lo == 0:
+        return hi
     else:
-        return gcd(hi, lo-1)
+        return gcdRecur(lo, hi%lo)
 
