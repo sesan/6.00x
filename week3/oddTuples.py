@@ -1,7 +1,9 @@
 def oddTuples(aTup):
-    tups = (aTup[0],)
-    for tup in range(len(aTup)):
-        tups += aTup[tup]
-    print(tups)
+    newTup = ()
+    for i in range(len(aTup)):
+        if i % 2 == 0:
+            newTup += (aTup[i],)
+    return newTup
+        
 
 oddTuples(('I', 'am', 'a', 'test', 'tuple'))

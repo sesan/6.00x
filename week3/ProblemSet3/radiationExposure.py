@@ -14,6 +14,11 @@ def radiationExposure(start, stop, step):
       between start and stop times.
     '''
 
+    exposure = 0.0
+    while start < stop:
+        exposure += step * f(start)
+        start += step      
+    return exposure 
 
 
 
@@ -22,3 +27,6 @@ def radiationExposure(start, stop, step):
 def f(x):
     import math
     return 10*math.e**(math.log(0.5)/5.27 * x)
+
+print(radiationExposure(0, 5, 1))
+print('correct output: 39.10318784326239')
