@@ -96,7 +96,8 @@ def getWordScore(word, n):
         return 0
     elif len(word) == n:
         score = pullScore(word) + 50
-        return 'Run out of letters. Total score: ' + str(score) + ' points.'
+        # return Total score: ' + str(score) + ' points.'
+        return score
         
         
             
