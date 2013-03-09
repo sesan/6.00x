@@ -71,11 +71,11 @@ def insertNewlines(text, lineLength):
         if text[lineLength - 1] == ' ':
             return text[:lineLength] + '\n' + insertNewlines(text[lineLength:], lineLength)
         else:
-            tempTextFr = text[:lineLength]
+            tempFront = text[:lineLength]
             tempBack = text[lineLength:]
             cut = tempBack.find(' ') + 1
             if cut <= 0:
-                return tempTextFr + tempBack
+                return tempFront + tempBack
             else:
                 newText = tempBack[cut:]
-                return tempTextFr + tempBack[:cut] + '\n' + insertNewlines(newText, lineLength)
+                return tempFront + tempBack[:cut] + '\n' + insertNewlines(newText, lineLength)
