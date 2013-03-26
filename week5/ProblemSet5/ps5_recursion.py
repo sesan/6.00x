@@ -1,6 +1,12 @@
 # 6.00x Problem Set 5
 #
 # Part 2 - RECURSION
+import imp
+
+storyFile = open("story.txt", 'r')
+story = storyFile.read()
+
+from ps5_encryption import *
 
 #
 # Problem 3: Recursive String Reversal
@@ -48,6 +54,7 @@ def x_ian(x, word):
         return x_ian(x[1:], word[1:])
     else:
         return x_ian(x, word[1:])
+
         
 
 #
